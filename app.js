@@ -6,12 +6,12 @@ const app=express();
 app.set('view engine','ejs');
 
 app.get('/',(req,res)=>{
-    res.sendFile(__dirname +'/index.html');
+    res.render('index');
 });
 
 
 app.get('/about',(req,res)=>{
-    res.sendFile(__dirname +'/about.html');
+    res.render('about');
 });
 
 // app.get('/profile/:id',(req,res)=>{
@@ -19,7 +19,8 @@ app.get('/about',(req,res)=>{
 // })
 
 app.get('/profile/:name',(req,res)=>{
-    res.send('Profile name is '+req.params.name);
+    const data={age:30,job:'developer', friends:['sarha','jane','wilma']};
+    res.render('profile',{person : req.params.name,data});
 })
 
 

@@ -7,23 +7,14 @@
     <style>
         body{
             background-color: aliceblue;
-            text-align: center;
-            font-size: 21px;
             padding: 27px;
+            font-size: 21px;
+            text-align: center;
         }
-        li{ margin : auto; width: fit-content;}
     </style>
 </head>
 <body>
     <%- include('partials/nav.ejs') %>
-    <h1>Profile <%= person %> </h1>
-    <h1>Age <%= data.age %></h1>
-    <h1>Job <%= data.job %></h1>
-    <h2>Friends</h2>
-    <ul>
-        <% data.friends.forEach((item) => { %>
-            <li> <%= item %></li>
-        <% }) %>
-    </ul>
+    <h1>This is my first website</h1>
 </body>
 </html>
